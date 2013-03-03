@@ -1,7 +1,0 @@
-; progguide.def : Declares the module parameters for the DLL.
-
-LIBRARY      "progguide"
-DESCRIPTION  'progguide Windows Dynamic Link Library'
-
-EXPORTS
-    ; Explicit exports can go here
