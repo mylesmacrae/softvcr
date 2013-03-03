@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: newproject - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP9D.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/newproject.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"M:\SoftVCR110Source\Vidcap.c"
+]
+Creating command line "cl.exe @C:\TEMP\RSP9D.tmp" 
+Creating temporary file "C:\TEMP\RSP9E.tmp" with contents
+[
+Release/TimerGuide.lib Release/vidlibrary.lib vfw32.lib msacm32.lib winmm.lib hcwAV.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Release/SoftVCR.pdb" /machine:I386 /out:"Release/SoftVCR.exe" 
+.\Release\Arrow.obj
+.\Release\Dialogs.obj
+.\Release\Help.obj
+.\Release\Profile.obj
+.\Release\Rlmeter.obj
+.\Release\Status.obj
+.\Release\Toolbar.obj
+.\Release\Vidcap.obj
+.\Release\Vidframe.obj
+.\Release\Vidcap.res
+.\Release\playback.lib
+.\Release\VidLibrary.lib
+.\Release\TimerGuide.lib
+]
+Creating command line "link.exe @C:\TEMP\RSP9E.tmp"
+<h3>Output Window</h3>
+Compiling...
+Vidcap.c
+Linking...
+
+
+
+<h3>Results</h3>
+SoftVCR.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

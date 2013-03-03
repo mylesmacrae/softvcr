@@ -1,0 +1,13 @@
+; TimerGuide.def : Declares the module parameters for the DLL.
+
+LIBRARY      "TimerGuide"
+DESCRIPTION  'TimerGuide Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	showTimerDlg
+	addToTimer
+	getNextTimer
+	showGuideDlg
+	getCurrentProg
+	checkGuideValidity

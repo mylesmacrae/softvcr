@@ -1,0 +1,10 @@
+; VidLibrary.def : Declares the module parameters for the DLL.
+
+LIBRARY      "VidLibrary"
+DESCRIPTION  'VidLibrary Windows Dynamic Link Library'
+
+EXPORTS
+	showLibraryDlg
+	addToLibrary
+    ; Explicit exports can go here
+
