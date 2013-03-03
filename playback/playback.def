@@ -1,0 +1,8 @@
+; playback.def : Declares the module parameters for the DLL.
+
+LIBRARY      "playback"
+DESCRIPTION  'playback Windows Dynamic Link Library'
+
+EXPORTS
+	playVideo
+    ; Explicit exports can go here

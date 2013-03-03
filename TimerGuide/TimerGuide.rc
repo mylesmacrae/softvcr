@@ -1,0 +1,451 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TimerGuide.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "TimerGuide DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TimerGuide\0"
+            VALUE "LegalCopyright", "Copyright (C) 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TimerGuide.DLL\0"
+            VALUE "ProductName", "TimerGuide Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TIMERDLG DIALOG DISCARDABLE  0, 0, 477, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Timer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,360,110,100,15
+    CONTROL         "List1",IDC_TIMERLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,10,15,330,110
+    GROUPBOX        "Current Timer Settings",IDC_STATIC,5,5,340,125
+    PUSHBUTTON      "Delete Timer",IDC_DELETETIMER,360,35,100,15
+    PUSHBUTTON      "Add Timer",IDC_ADDTIMER,360,15,100,15
+    GROUPBOX        "Timer Controls",IDC_STATIC,351,5,120,50
+    GROUPBOX        "",IDC_STATIC,350,55,120,45
+    LTEXT           "The Timer is currently disabled.  Please return to the main capture window to re-enable it.",
+                    IDC_STATIC,355,65,110,30
+END
+
+IDD_GUIDDLG DIALOG DISCARDABLE  0, 0, 432, 281
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Programme Guide"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,350,160,70,14
+    CONTROL         "List1",IDC_ProgGuide,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHAREIMAGELISTS | WS_BORDER | 
+                    WS_TABSTOP,10,45,410,100
+    CONTROL         "List2",IDC_TIMERLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHAREIMAGELISTS | WS_BORDER | 
+                    WS_TABSTOP,11,191,409,69
+    PUSHBUTTON      "Add To Timer",IDC_ADDTOTTIMER,10,160,75,15,WS_DISABLED
+    PUSHBUTTON      "Remove From Timer",IDC_REMOVETIMER,90,160,75,15,
+                    WS_DISABLED
+    GROUPBOX        "Programme Listings",IDC_STATIC,5,35,420,115
+    GROUPBOX        "Timer Settings",IDC_STATIC,5,180,420,85
+    PUSHBUTTON      "Get Listings",IDC_GetListings,260,160,75,15
+    GROUPBOX        "Adding Listing to Timer",IDC_STATIC,5,150,165,30
+    GROUPBOX        "",IDC_STATIC,255,150,85,30
+    GROUPBOX        "",IDC_STATIC,345,150,80,30
+    PUSHBUTTON      "Show Description",IDC_SHOWDESC,175,160,75,15,
+                    WS_DISABLED
+    LTEXT           "The Timer is currently disabled.  Please return to the capture window to enable it.",
+                    IDC_STATIC,85,270,254,8
+    COMBOBOX        IDC_DISPCHAN,90,10,120,125,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_DISPDATE,226,10,120,120,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Display Channel",IDC_STATIC,85,0,130,30
+    GROUPBOX        "Display Date",IDC_STATIC,220,0,130,30
+END
+
+IDD_ADDTIMER DIALOG DISCARDABLE  0, 0, 387, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Add Timer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,325,65,60,15,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,325,85,60,15
+    CONTROL         "DateTimePicker1",IDC_STARTTIMEPICKER,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,150,20,65,
+                    15
+    CONTROL         "MonthCalendar1",IDC_MONTHCALENDAR1,"SysMonthCal32",0x0,
+                    11,10,125,85
+    LTEXT           "Start Time",IDC_STATIC,150,10,50,10
+    LTEXT           "End Time",IDC_STATIC,150,40,55,10
+    CONTROL         "DateTimePicker2",IDC_ENDDATETIMEPICKER,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    WS_TABSTOP | 0x8,150,50,65,15
+    GROUPBOX        "Date",IDC_STATIC,5,0,135,100
+    GROUPBOX        "Times",IDC_STATIC,145,0,75,100
+    GROUPBOX        "Channel",IDC_STATIC,225,0,95,70
+    GROUPBOX        "Duration",IDC_STATIC,325,0,60,60
+    EDITTEXT        IDC_DURATION,330,25,50,15,ES_CENTER | ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_BORDER
+    LISTBOX         IDC_CHANNELLIST,230,10,85,55,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Programme Name",IDC_STATIC,225,70,95,30
+    EDITTEXT        IDC_PROGNAME,230,80,85,15,ES_AUTOHSCROLL
+    LTEXT           "Frequency",IDC_STATIC,150,70,45,10
+    COMBOBOX        IDC_FREQUENCY,150,80,65,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_GETLISTING DIALOG DISCARDABLE  0, 0, 157, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Get Web Listing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Get Listings",IDOK,80,135,70,15
+    PUSHBUTTON      "Cancel",IDCANCEL,5,135,70,15
+    COMBOBOX        IDC_LISTINGCOMBO,50,10,95,80,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Choose Listings Website",IDC_STATIC,5,0,145,30
+    GROUPBOX        "Choose Date Range",IDC_STATIC,5,60,145,70
+    CONTROL         "DateTimePicker1",IDC_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,10,70,135,15
+    LTEXT           "Date",IDC_STATIC,10,86,45,10
+    CONTROL         "DateTimePicker2",IDC_STARTTIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,10,100,65,
+                    15
+    CONTROL         "DateTimePicker3",IDC_ENDTIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,80,100,65,
+                    15
+    LTEXT           "Start Time",IDC_STATIC,10,115,65,10
+    LTEXT           "End Time",IDC_STATIC,80,115,65,10
+    COMBOBOX        IDC_CHANNELCOMBO,10,40,135,90,CBS_DROPDOWNLIST | 
+                    CBS_SORT | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Choose Channel",IDC_STATIC,5,30,145,30
+    PUSHBUTTON      "Add",IDC_ADDPARSER,10,10,35,15
+END
+
+IDD_PARSERCONFIG DIALOG DISCARDABLE  0, 0, 162, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Up Parser"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Next >>",IDOK,105,140,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,5,140,50,14
+    LTEXT           "For the following TV channel.  Please select a listing page from the list.",
+                    IDC_STATIC,5,5,125,20
+    EDITTEXT        IDC_CURRENTCHANNEL,40,30,85,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER
+    LISTBOX         IDC_LISTISTINGLIST,5,50,150,85,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_GETLISTING2 DIALOG DISCARDABLE  0, 0, 157, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Get Web Listing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Get Listings",IDOK,80,95,70,15
+    PUSHBUTTON      "Cancel",IDCANCEL,5,95,70,15
+    COMBOBOX        IDC_LISTINGCOMBO,50,10,95,80,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Choose Listings Website",IDC_STATIC,5,0,145,30
+    GROUPBOX        "Choose Date",IDC_STATIC,5,60,145,30
+    CONTROL         "DateTimePicker1",IDC_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,10,70,135,15
+    COMBOBOX        IDC_CHANNELCOMBO,10,40,135,90,CBS_DROPDOWNLIST | 
+                    CBS_SORT | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Choose Channel",IDC_STATIC,5,30,145,30
+    PUSHBUTTON      "Add",IDC_ADDPARSER,10,10,35,15
+END
+
+IDD_WEBBROWSER DIALOG DISCARDABLE  0, 0, 552, 236
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "External Web Page"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,500,220,50,14
+    CONTROL         "",IDC_EXPLORER3,"{8856F961-340A-11D0-A96B-00C04FD705A2}",
+                    WS_TABSTOP,5,5,540,210
+END
+
+IDD_FREQUENCY DIALOG DISCARDABLE  0, 0, 157, 26
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Frequency"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,110,5,40,15
+    COMBOBOX        IDC_FREQUENCYLIST,5,5,100,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_GETWEEKLIST DIALOG DISCARDABLE  0, 0, 147, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Get Listings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,71,35,55,15
+    PUSHBUTTON      "Cancel",IDCANCEL,5,35,55,15
+    COMBOBOX        IDC_COMBO1,40,10,95,55,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Select Source",IDC_STATIC,5,0,135,30
+    LTEXT           "SoftVCR will now update the programme guide. This may take a while.",
+                    IDC_STATIC,5,55,120,25
+    PUSHBUTTON      "Add",IDC_BUTTON1,10,10,25,15
+    EDITTEXT        IDC_PROGSTRING,5,85,135,15,ES_CENTER | ES_AUTOHSCROLL | 
+                    WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TIMERDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 470
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_GUIDDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 425
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 274
+    END
+
+    IDD_ADDTIMER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 380
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_GETLISTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_PARSERCONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_GETLISTING2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_WEBBROWSER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 545
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_FREQUENCY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 19
+    END
+
+    IDD_GETWEEKLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_WEBBROWSER DLGINIT
+BEGIN
+    IDC_EXPLORER3, 0x376, 156, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x53b7, 0x0000, 0x233e, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+IDD_ADDTIMER DLGINIT
+BEGIN
+    IDC_FREQUENCY, 0x403, 5, 0
+0x6e4f, 0x6563, "\000" 
+    IDC_FREQUENCY, 0x403, 6, 0
+0x6144, 0x6c69, 0x0079, 
+    IDC_FREQUENCY, 0x403, 7, 0
+0x6557, 0x6b65, 0x796c, "\000" 
+    IDC_FREQUENCY, 0x403, 10, 0
+0x6557, 0x6b65, 0x4420, 0x7961, 0x0073, 
+    IDC_FREQUENCY, 0x403, 9, 0
+0x6557, 0x6b65, 0x6e65, 0x7364, "\000" 
+    0
+END
+
+IDD_FREQUENCY DLGINIT
+BEGIN
+    IDC_FREQUENCYLIST, 0x403, 5, 0
+0x6e4f, 0x6563, "\000" 
+    IDC_FREQUENCYLIST, 0x403, 6, 0
+0x6144, 0x6c69, 0x0079, 
+    IDC_FREQUENCYLIST, 0x403, 7, 0
+0x6557, 0x6b65, 0x796c, "\000" 
+    IDC_FREQUENCYLIST, 0x403, 10, 0
+0x6557, 0x6b65, 0x4420, 0x7961, 0x0073, 
+    IDC_FREQUENCYLIST, 0x403, 9, 0
+0x6557, 0x6b65, 0x6e65, 0x7364, "\000" 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\TimerGuide.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
